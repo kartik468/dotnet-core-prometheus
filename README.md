@@ -1,15 +1,16 @@
+### Todo app (dotnet core) with monitoring using prometheus client library.
 
-## TODO App
+#### TODO App
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
 
-## Prometheus Client Library
+#### Prometheus Client Library
 https://github.com/prometheus-net/prometheus-net
 
-## Prometheus Client Libraries
+#### Prometheus Client Libraries
 https://prometheus.io/docs/instrumenting/clientlibs/
 
 
-## Prometheus scrape config
+#### Prometheus scrape config
 
 ```yml
   - job_name: 'dotnet-core-todo'
