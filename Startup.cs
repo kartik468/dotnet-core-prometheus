@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 
+using Prometheus;
+
 namespace TodoApi
 {
     public class Startup
@@ -30,6 +32,8 @@ namespace TodoApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // app.UseMetricServer();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -39,11 +43,15 @@ namespace TodoApi
 
             app.UseRouting();
 
+            app.UseHttpMetrics();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                endpoints.MapMetrics();
             });
         }
     }

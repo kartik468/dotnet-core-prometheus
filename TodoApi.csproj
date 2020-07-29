@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+    <PackageReference Include="prometheus-net" Version="4.0.0-pre-000134-2fea549" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="4.0.0-pre-000134-2fea549" />
   </ItemGroup>
 
 
